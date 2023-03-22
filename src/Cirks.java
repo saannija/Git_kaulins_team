@@ -10,16 +10,25 @@ class Cirks {
 			System.out.println("Uzkrita skaitlis: "+skaitlis);
 		}
 	}
-	
 	public static void main(String[] args) {
-		int reizes;
+		int reizes = 0, izvele;
 		Scanner scan = new Scanner(System.in);
+		do{
+			System.out.println("1-Mest kaulinu\n2-Apturet");
+			izvele=scan.nextInt();
+			switch(izvele){
+			case 1:
 		do{
 		System.out.println("Cik reizes mest kaulinu?");
 		reizes = scan.nextInt();
 		}while(reizes < 1);
-		scan.close();
+		break;
+			case 2:
+				System.out.println("Programma aptureta!");
+		break;
+		}
+		}while(izvele!=2);
 		mestKaulinu(reizes);
-
+		scan.close();
 	}
 }
